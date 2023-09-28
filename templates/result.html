@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>GPT study book</title>
+</head>
+<body>
+  <h1>GPT study book</h1>
+  <table>
+    <thead>
+      <tr colspan = "2">{{topic}}<br></tr>
+    </thead>
+    <tbody>
+      {% for index in range(chapters|length) %}
+      <tr>
+        {{ chapters[index]|safe }}<br>
+        {{ books[index]|safe|replace("<br>", "<br>") }}
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</body>
+</html>
